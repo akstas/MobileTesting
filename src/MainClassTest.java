@@ -3,11 +3,12 @@ import org.junit.Test;
 
 public class MainClassTest {
     @Test
-    public void testGetLocalNumber()
+    public void testGetClassNumber()
     {
-        int expectedValue = 15;
-        int actualValue = MainClass.getLocalNumber();
-        String errStr = "Ожидаемое значение %s не равно фактическому %s ";
-        Assert.assertTrue(String.format(errStr, expectedValue, actualValue),expectedValue == actualValue);
+        int expectedValue = 45;
+        MainClass mainClass = new MainClass();
+        int actualValue = mainClass.getClassNumber();
+        String errStr = "Ожидаемое значение %s больше фактического %s ";
+        Assert.assertTrue(String.format(errStr, expectedValue, actualValue), actualValue > expectedValue);
     }
 }

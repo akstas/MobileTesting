@@ -1,7 +1,7 @@
 public class MainClass {
-    public static int getLocalNumber()
+    private int class_number = 20;
+    public int getClassNumber()
     {
-        int actualValue = 14;
-        return actualValue;
+        return class_number;
     }
 }
