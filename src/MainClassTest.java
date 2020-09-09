@@ -1,14 +1,17 @@
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class MainClassTest {
     @Test
-    public void testGetClassNumber()
+    public void testGetClassString()
     {
-        int expectedValue = 45;
         MainClass mainClass = new MainClass();
-        int actualValue = mainClass.getClassNumber();
-        String errStr = "Ожидаемое значение %s больше фактического %s ";
-        Assert.assertTrue(String.format(errStr, expectedValue, actualValue), actualValue > expectedValue);
+        String actualValue = mainClass.getClassString();
+        String errStr = "Полученная срока не содержит текст hello или Hello  ";
+        Assert.assertTrue(errStr,actualValue.toLowerCase().contains("hello"));
     }
 }
